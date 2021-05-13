@@ -8,8 +8,9 @@ Currently supported source materials:
 
 ## Installation
 
-Via Package Manager:
+Git URL via Package Manager:
 
+`https://github.com/Roland09/BetterLitShaderExtensions.git?path=/Assets/BetterLitShaderExtensions`
 
 
 ## Usage
