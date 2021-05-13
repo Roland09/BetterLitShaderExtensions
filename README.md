@@ -1,6 +1,6 @@
 # BetterLitShader Extensions
 
-Modification of Unity's HDRP Material Upgrader which allows you to upgrade all or selected materials to `Better Lit/Lit`.
+Modification of Unity's HDRP Material Upgrader (please note the Unity Companion License) which allows you to upgrade all or selected materials to `Better Lit/Lit`.
 
 Currently supported source materials:
 
