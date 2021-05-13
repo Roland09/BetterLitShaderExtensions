@@ -1,6 +1,6 @@
 # BetterLitShader Extensions
 
-This [Better Lit Shader Extension](https://assetstore.unity.com/packages/vfx/shaders/better-lit-shader-189232) is a modification of Unity's HDRP Material Upgrader (please note the Unity Companion License) which allows you to upgrade all or selected materials to `Better Lit/Lit`.
+This [Better Lit Shader Extension](https://assetstore.unity.com/packages/vfx/shaders/better-lit-shader-189232) is a modification of [Unity's HDRP Material Upgrader](https://github.com/Unity-Technologies/Graphics/tree/master/com.unity.render-pipelines.high-definition) (please note the Unity Companion License) which allows you to upgrade all or selected materials to `Better Lit/Lit`.
 
 Currently supported source materials:
 

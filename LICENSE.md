@@ -4,7 +4,7 @@ Please be aware that Unity is in no way affiliated with this project!
 
 Original license from:
 
-https://github.com/Unity-Technologies/Graphics/blob/master/com.unity.render-pipelines.high-definition-config/LICENSE.md
+https://github.com/Unity-Technologies/Graphics/blob/master/com.unity.render-pipelines.high-definition/LICENSE.md
 
 ### Original License
 
