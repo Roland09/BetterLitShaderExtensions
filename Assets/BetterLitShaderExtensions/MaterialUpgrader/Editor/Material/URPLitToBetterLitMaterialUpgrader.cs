@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace Rowlan.BetterLitShaderExtensions.MaterialUpgrader
 {
-    class HDLitToBetterLitMaterialUpgrader : MaterialUpgrader
+    class URPLitToBetterLitMaterialUpgrader : MaterialUpgrader
     {
-#if USING_HDRP
-        public HDLitToBetterLitMaterialUpgrader(string sourceShaderName, string destShaderName, MaterialFinalizer finalizer = null)
+#if USING_URP
+        public URPLitToBetterLitMaterialUpgrader(string sourceShaderName, string destShaderName, MaterialFinalizer finalizer = null)
         {
             RenameShader(sourceShaderName, destShaderName, finalizer);
         }
@@ -23,7 +23,7 @@ namespace Rowlan.BetterLitShaderExtensions.MaterialUpgrader
 			// but if you have multiple materials, you'd have to click on every single one of them.
 			// => we do manual conversion
 
-			Texture mainTex = srcMaterial.GetTexture("_MainTex");
+			Texture mainTex = srcMaterial.GetTexture("_BaseMap");
             if (mainTex != null) {
                 dstMaterial.SetTexture("_AlbedoMap", mainTex);
             }

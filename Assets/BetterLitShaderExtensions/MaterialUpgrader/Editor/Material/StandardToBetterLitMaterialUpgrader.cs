@@ -3,10 +3,11 @@ using UnityEngine;
 
 namespace Rowlan.BetterLitShaderExtensions.MaterialUpgrader
 {
-    class HDLitToBetterLitMaterialUpgrader : MaterialUpgrader
+    class StandardToBetterLitMaterialUpgrader : MaterialUpgrader
     {
-#if USING_HDRP
-        public HDLitToBetterLitMaterialUpgrader(string sourceShaderName, string destShaderName, MaterialFinalizer finalizer = null)
+#if !USING_HDRP && !USING_URP
+
+        public StandardToBetterLitMaterialUpgrader(string sourceShaderName, string destShaderName, MaterialFinalizer finalizer = null)
         {
             RenameShader(sourceShaderName, destShaderName, finalizer);
         }
@@ -28,7 +29,7 @@ namespace Rowlan.BetterLitShaderExtensions.MaterialUpgrader
                 dstMaterial.SetTexture("_AlbedoMap", mainTex);
             }
 
-            Color baseColor = srcMaterial.GetColor("_BaseColor");
+            Color baseColor = srcMaterial.GetColor("_Color");
             if( baseColor != null) {
                 dstMaterial.SetColor("_Tint", baseColor);
 			}
@@ -44,7 +45,7 @@ namespace Rowlan.BetterLitShaderExtensions.MaterialUpgrader
             MaterialEditor.ApplyMaterialPropertyDrawers(dstMaterial);
             EditorUtility.SetDirty(dstMaterial);
         }
-#endif
 
+#endif
     }
 }
