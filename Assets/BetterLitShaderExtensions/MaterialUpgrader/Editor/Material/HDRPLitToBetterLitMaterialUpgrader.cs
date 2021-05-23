@@ -10,11 +10,11 @@ namespace Rowlan.BetterLitShaderExtensions.MaterialUpgrader
         {
             RenameShader(sourceShaderName, destShaderName, finalizer);
 
-			RenameTexture("_MainTex", "_AlbedoMap");
-			RenameColor("_BaseColor", "_Tint");
-			RenameTexture("_BumpMap", "_NormalMap");
+            RenameTexture("_MainTex", "_AlbedoMap");
+            RenameColor("_BaseColor", "_Tint");
+            RenameTexture("_BumpMap", "_NormalMap");
 
-		}
+        }
 
         public override void Convert(Material srcMaterial, Material dstMaterial)
         {
