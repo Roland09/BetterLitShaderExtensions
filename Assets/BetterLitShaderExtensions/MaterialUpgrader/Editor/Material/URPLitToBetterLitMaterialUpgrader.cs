@@ -9,6 +9,10 @@ namespace Rowlan.BetterLitShaderExtensions.MaterialUpgrader
         public URPLitToBetterLitMaterialUpgrader(string sourceShaderName, string destShaderName, MaterialFinalizer finalizer = null)
         {
             RenameShader(sourceShaderName, destShaderName, finalizer);
+
+            RenameTexture("_BaseMap", "_AlbedoMap");
+            RenameColor("_BaseColor", "_Tint");
+            RenameTexture("_BumpMap", "_NormalMap");
         }
 
         public override void Convert(Material srcMaterial, Material dstMaterial)
@@ -19,25 +23,10 @@ namespace Rowlan.BetterLitShaderExtensions.MaterialUpgrader
 
             #region Mapping of material properties
 
-			// perform manual conversion. BetterLit Shaders would support automatic conversion when you click on a material,
-			// but if you have multiple materials, you'd have to click on every single one of them.
-			// => we do manual conversion
-
-			Texture mainTex = srcMaterial.GetTexture("_BaseMap");
-            if (mainTex != null) {
-                dstMaterial.SetTexture("_AlbedoMap", mainTex);
-            }
-
-            Color baseColor = srcMaterial.GetColor("_BaseColor");
-            if( baseColor != null) {
-                dstMaterial.SetColor("_Tint", baseColor);
-			}
-
-            Texture bumpMap = srcMaterial.GetTexture("_BumpMap");
-            if (bumpMap != null)
-            {
-                dstMaterial.SetTexture("_NormalMap", bumpMap);
-            }
+            // add additional remapping code here
+            // as an example of e. g. convert the to mask map see 
+            // the code in Unity's own StandardsToHDLitMaterialUpgrader of the HDRP upgrader
+            // ...
 
             #endregion Mapping of material properties
 
