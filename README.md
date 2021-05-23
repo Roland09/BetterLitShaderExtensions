@@ -5,6 +5,8 @@ This [Better Lit Shader Extension](https://assetstore.unity.com/packages/vfx/sha
 Currently supported source materials:
 
 * `HDRP/Lit`
+* `Universal Render Pipeline/Lit`
+* `Standard`
 
 ## Installation
 
