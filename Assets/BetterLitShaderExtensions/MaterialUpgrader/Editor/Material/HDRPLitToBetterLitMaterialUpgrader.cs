@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace Rowlan.BetterLitShaderExtensions.MaterialUpgrader
 {
-    class HDLitToBetterLitMaterialUpgrader : MaterialUpgrader
+    class HDRPLitToBetterLitMaterialUpgrader : MaterialUpgrader
     {
 #if USING_HDRP
-        public HDLitToBetterLitMaterialUpgrader(string sourceShaderName, string destShaderName, MaterialFinalizer finalizer = null)
+        public HDRPLitToBetterLitMaterialUpgrader(string sourceShaderName, string destShaderName, MaterialFinalizer finalizer = null)
         {
             RenameShader(sourceShaderName, destShaderName, finalizer);
 

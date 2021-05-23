@@ -14,7 +14,7 @@ namespace Rowlan.BetterLitShaderExtensions.MaterialUpgrader
 
 #if USING_HDRP
 
-            upgraders.Add(new HDLitToBetterLitMaterialUpgrader("HDRP/Lit", "Better Lit/Lit"));
+            upgraders.Add(new HDRPLitToBetterLitMaterialUpgrader("HDRP/Lit", "Better Lit/Lit"));
 
 #elif USING_URP
 
