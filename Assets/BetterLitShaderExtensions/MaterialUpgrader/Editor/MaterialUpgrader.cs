@@ -92,6 +92,8 @@ namespace Rowlan.BetterLitShaderExtensions.MaterialUpgrader
                 newMaterial.shader = Shader.Find(m_NewShader);
             }
 
+            Undo.RecordObject(material, "Material Upgrade");
+
             Convert(material, newMaterial);
 
             material.shader = Shader.Find(m_NewShader);
